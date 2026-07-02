@@ -2,23 +2,23 @@ import { BANK, CONTACT } from "@/config";
 
 export default function InformasiLain() {
 	return (
-		<section id="informasi" className="bg-neutral-50 relative">
+		<section id="informasi" className="bg-navy-950 relative">
 			<div className="max-w-[1000px] mx-auto py-20 px-6 text-center">
-				<span className="inline-flex items-center gap-2 px-4 py-1.5 text-[0.8125rem] font-semibold tracking-wide uppercase text-primary-600 bg-primary-50 border border-primary-200 rounded-full mb-4">
+				<span className="inline-flex items-center gap-2 px-4 py-1.5 text-[0.8125rem] font-semibold tracking-wide uppercase bg-white/8 text-silver-200 border border-gold-400/20 rounded-full mb-4">
 					ℹ️ Informasi Lain
 				</span>
-				<h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold text-primary-900 leading-tight mb-4 max-w-[640px] mx-auto">
+				<h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold text-white font-headline leading-tight mb-4 max-w-[640px] mx-auto">
 					Rekening &amp; Kontak Resmi
 				</h2>
-				<p className="text-[clamp(1rem,2vw,1.125rem)] text-neutral-500 leading-relaxed max-w-[600px] mx-auto mb-12">
+				<p className="text-[clamp(1rem,2vw,1.125rem)] text-silver-400 leading-relaxed max-w-[600px] mx-auto mb-12">
 					Gunakan rekening resmi di bawah untuk pembayaran, lalu konfirmasi ke
 					admin melalui WhatsApp.
 				</p>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-left">
 					{/* Bank */}
-					<div className="bg-white rounded-2xl p-8 border border-neutral-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)] flex flex-col gap-4">
-						<div className="w-12 h-12 rounded-lg bg-primary-50 flex items-center justify-center text-primary-600">
+					<div className="card-chrome rounded-2xl p-8 transition-all duration-250 flex flex-col gap-4">
+						<div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center text-gold-400">
 							<svg
 								width="24"
 								height="24"
@@ -39,21 +39,21 @@ export default function InformasiLain() {
 							</svg>
 						</div>
 						<div>
-							<div className="text-sm font-semibold text-neutral-400 mb-1">
+							<div className="text-sm font-semibold text-silver-400 mb-1">
 								Bank {BANK.name}
 							</div>
-							<div className="text-2xl font-extrabold tracking-wide text-primary-900 mb-1 [overflow-wrap:anywhere]">
+							<div className="text-2xl font-extrabold tracking-wide text-white mb-1 [overflow-wrap:anywhere]">
 								{BANK.accountNumber}
 							</div>
-							<div className="text-sm text-neutral-500">
+							<div className="text-sm text-silver-400">
 								a.n. {BANK.accountHolder}
 							</div>
 						</div>
 					</div>
 
 					{/* WhatsApp */}
-					<div className="bg-white rounded-2xl p-8 border border-neutral-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)] flex flex-col gap-4">
-						<div className="w-12 h-12 rounded-lg bg-secondary-50 flex items-center justify-center text-secondary-600">
+					<div className="card-chrome rounded-2xl p-8 transition-all duration-250 flex flex-col gap-4">
+						<div className="w-12 h-12 rounded-lg bg-[#25D366]/10 flex items-center justify-center text-[#25D366]">
 							<svg
 								width="24"
 								height="24"
@@ -65,13 +65,13 @@ export default function InformasiLain() {
 							</svg>
 						</div>
 						<div>
-							<div className="text-sm font-semibold text-neutral-400 mb-1">
+							<div className="text-sm font-semibold text-silver-400 mb-1">
 								WhatsApp Admin
 							</div>
-							<div className="text-2xl font-extrabold tracking-wide text-primary-900 mb-1">
+							<div className="text-2xl font-extrabold tracking-wide text-white mb-1">
 								{CONTACT.whatsappDisplay}
 							</div>
-							<div className="text-sm text-neutral-500">
+							<div className="text-sm text-silver-400">
 								Kirim bukti pembayaran &amp; minta passcode
 							</div>
 						</div>
@@ -79,7 +79,7 @@ export default function InformasiLain() {
 							href={`https://wa.me/${CONTACT.whatsapp}`}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="mt-auto inline-flex items-center justify-center gap-2 px-6 py-3 min-h-11 font-bold text-sm rounded-full bg-secondary-500 text-white hover:bg-secondary-600 transition-colors duration-150 no-underline"
+							className="mt-auto inline-flex items-center justify-center gap-2 px-6 py-3 min-h-11 font-bold text-sm rounded-full bg-[#25D366] text-white hover:bg-[#128C7E] transition-colors duration-150 no-underline"
 						>
 							Chat via WhatsApp
 						</a>

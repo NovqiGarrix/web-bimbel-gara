@@ -1,47 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap");
 @import "tailwindcss";
 
 :root {
-  --font-plus-jakarta-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui,
-    sans-serif;
+  --font-headline: "Playfair Display", "Georgia", serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
   /* Fallback until the fixed header measures itself on the client. */
   --header-height: 66px;
 }
 
 @theme inline {
-  --font-sans: var(--font-plus-jakarta-sans);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-headline);
 
-  /* Primary - Calming Blues */
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e3a5f;
-  --color-primary-900: #0f2744;
-  --color-primary-950: #0a1929;
+  /* ─── Royal Navy (Primary) ─── */
+  --color-navy-50: #e8eaf2;
+  --color-navy-100: #c5c9de;
+  --color-navy-200: #9da3c5;
+  --color-navy-300: #757dac;
+  --color-navy-400: #56619a;
+  --color-navy-500: #374588;
+  --color-navy-600: #313d80;
+  --color-navy-700: #283375;
+  --color-navy-800: #1f296b;
+  --color-navy-900: #0f1a57;
+  --color-navy-950: #0A153A;
 
-  /* Secondary - Soft Greens */
-  --color-secondary-50: #f0fdf4;
-  --color-secondary-100: #dcfce7;
-  --color-secondary-200: #bbf7d0;
-  --color-secondary-300: #86efac;
-  --color-secondary-400: #4ade80;
-  --color-secondary-500: #22c55e;
-  --color-secondary-600: #16a34a;
+  /* ─── Regal Gold (Accent / CTA) ─── */
+  --color-gold-50: #fdf8ec;
+  --color-gold-100: #faecc8;
+  --color-gold-200: #f5d88f;
+  --color-gold-300: #efc455;
+  --color-gold-400: #E1AF3E;
+  --color-gold-500: #c9952e;
+  --color-gold-600: #a57523;
+  --color-gold-700: #83591d;
+  --color-gold-800: #6c491d;
+  --color-gold-900: #5c3d1e;
 
-  /* Accent - Warm Coral */
-  --color-accent-400: #fb923c;
-  --color-accent-500: #f97316;
-  --color-accent-600: #ea580c;
-  --color-accent-warm: #ff6b6b;
-  --color-accent-coral: #ff8a65;
-  --color-accent-peach: #ffab91;
+  /* ─── Passion Red (Secondary) ─── */
+  --color-red-50: #fef2f2;
+  --color-red-100: #fee2e2;
+  --color-red-200: #fecaca;
+  --color-red-300: #f7a3a3;
+  --color-red-400: #ef6b6b;
+  --color-red-500: #e03e3e;
+  --color-red-600: #C11B1B;
+  --color-red-700: #a31818;
+  --color-red-800: #871818;
+  --color-red-900: #711a1a;
 
-  /* Neutrals */
+  /* ─── Chrome Silver (Neutral / Borders) ─── */
+  --color-silver-50: #f6f8f9;
+  --color-silver-100: #edf1f4;
+  --color-silver-200: #dce3e8;
+  --color-silver-300: #BAC8D1;
+  --color-silver-400: #9aacb9;
+  --color-silver-500: #7e92a2;
+  --color-silver-600: #6a7d8e;
+  --color-silver-700: #576776;
+  --color-silver-800: #4a5762;
+  --color-silver-900: #404a53;
+
+  /* ─── Electric Blue (Highlights) ─── */
+  --color-blue-50: #eff5ff;
+  --color-blue-100: #dbeaff;
+  --color-blue-200: #bfd7ff;
+  --color-blue-300: #93bcff;
+  --color-blue-400: #5f96fc;
+  --color-blue-500: #1E66CB;
+  --color-blue-600: #1a57b0;
+  --color-blue-700: #174a96;
+  --color-blue-800: #183e7b;
+  --color-blue-900: #193566;
+
+  /* ─── Neutrals ─── */
   --color-neutral-50: #fafafa;
   --color-neutral-100: #f5f5f5;
   --color-neutral-200: #e5e5e5;
@@ -52,6 +84,10 @@
   --color-neutral-700: #404040;
   --color-neutral-800: #262626;
   --color-neutral-900: #171717;
+
+  /* ─── WhatsApp Green (functional) ─── */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #128C7E;
 }
 
 html {
@@ -59,18 +95,115 @@ html {
 }
 
 body {
-  background: var(--color-neutral-50);
-  color: var(--color-neutral-800);
-  font-family: var(--font-plus-jakarta-sans), system-ui, sans-serif;
+  background: var(--color-navy-950);
+  color: var(--color-silver-100);
+  font-family: var(--font-body), system-ui, sans-serif;
   overflow-x: hidden;
 }
 
 ::selection {
-  background-color: var(--color-primary-200);
-  color: var(--color-primary-900);
+  background-color: rgba(225, 175, 62, 0.28);
+  color: #fff;
 }
 
-/* Animations */
+/* ─── Headline utility ─── */
+.font-headline {
+  font-family: var(--font-headline);
+}
+
+/* ─── Gold gradient CTA button ─── */
+.btn-gold {
+  background: linear-gradient(135deg, #f5d88f 0%, #E1AF3E 40%, #c9952e 100%);
+  color: var(--color-navy-950);
+  border: 1px solid rgba(225, 175, 62, 0.4);
+  box-shadow:
+    0 4px 20px rgba(225, 175, 62, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.btn-gold:hover {
+  background: linear-gradient(135deg, #faecc8 0%, #efc455 40%, #E1AF3E 100%);
+  box-shadow:
+    0 6px 28px rgba(225, 175, 62, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+/* ─── Gold outline button ─── */
+.btn-gold-outline {
+  background: transparent;
+  color: var(--color-gold-400);
+  border: 2px solid var(--color-gold-400);
+}
+.btn-gold-outline:hover {
+  background: rgba(225, 175, 62, 0.1);
+  color: var(--color-gold-300);
+  border-color: var(--color-gold-300);
+}
+
+/* ─── Red secondary button ─── */
+.btn-red {
+  background: linear-gradient(135deg, #ef6b6b 0%, #C11B1B 60%, #a31818 100%);
+  color: #fff;
+  border: 1px solid rgba(193, 27, 27, 0.3);
+  box-shadow: 0 4px 20px rgba(193, 27, 27, 0.3);
+}
+.btn-red:hover {
+  background: linear-gradient(135deg, #f7a3a3 0%, #e03e3e 50%, #C11B1B 100%);
+  box-shadow: 0 6px 28px rgba(193, 27, 27, 0.45);
+  transform: translateY(-2px);
+}
+.btn-red:active {
+  transform: translateY(0);
+}
+
+/* ─── Red outline button ─── */
+.btn-red-outline {
+  background: transparent;
+  color: var(--color-red-600);
+  border: 2px solid var(--color-red-600);
+}
+.btn-red-outline:hover {
+  background: rgba(193, 27, 27, 0.08);
+  color: var(--color-red-500);
+  border-color: var(--color-red-500);
+}
+
+/* ─── Navy subtle pattern ─── */
+.bg-navy-pattern {
+  background-image: radial-gradient(rgba(186, 200, 209, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ─── Gold accent stripe (for navbar bottom) ─── */
+.accent-stripe {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-silver-300) 20%,
+    var(--color-gold-400) 50%,
+    var(--color-silver-300) 80%,
+    transparent 100%
+  );
+}
+
+/* ─── Card with chrome silver border ─── */
+.card-chrome {
+  border: 1px solid rgba(186, 200, 209, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+}
+.card-chrome:hover {
+  border-color: rgba(186, 200, 209, 0.35);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ─── Animations ─── */
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   33% { transform: translateY(-12px) rotate(2deg); }
@@ -98,6 +231,11 @@ body {
   100% { transform: translateX(100%); }
 }
 
+@keyframes gold-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(225, 175, 62, 0.4); }
+  50% { box-shadow: 0 0 20px 4px rgba(225, 175, 62, 0.15); }
+}
+
 /* Utility animation classes */
 .animate-float {
   animation: float 6s ease-in-out infinite;
@@ -115,6 +253,10 @@ body {
   animation: slide-up 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
+.animate-gold-pulse {
+  animation: gold-pulse 2s ease-in-out infinite;
+}
+
 /* Stagger children animation */
 .stagger-children > * {
   animation: slide-up 0.5s ease both;
@@ -126,15 +268,17 @@ body {
 .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
 .stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
 
-/* CTA Shimmer effect */
+/* CTA Shimmer effect — gold tinted */
 .btn-cta::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
   animation: shimmer 3s ease-in-out infinite;
 }
 
-.merah {
-  border: 1px solid red;
+/* Light section overrides */
+.section-light {
+  background: linear-gradient(180deg, #f0f2f8 0%, #e8eaf2 100%);
+  color: var(--color-navy-950);
 }

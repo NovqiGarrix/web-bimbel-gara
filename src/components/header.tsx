@@ -27,7 +27,7 @@ export default function Header() {
 	}, []);
 
 	return (
-		<header className="fixed top-0 left-0 right-0 z-50 bg-primary-950/80 backdrop-blur-xl border-b border-white/10 transition-all duration-250">
+		<header className="fixed top-0 left-0 right-0 z-50 bg-navy-950/90 backdrop-blur-xl border-b border-gold-400/20 transition-all duration-250">
 			<div
 				ref={topBarRef}
 				className="max-w-300 mx-auto px-6 py-3 flex items-center justify-between"
@@ -36,16 +36,14 @@ export default function Header() {
 				<Link
 					to="/"
 					className="flex items-center gap-2.5 no-underline shrink-0"
-					aria-label="Bimbel Gara - Beranda"
+					aria-label="GASS Bimbel - Beranda"
 				>
-					<div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white font-extrabold text-lg shadow-[0_0_40px_rgba(59,130,246,0.15)]">
-						G
-					</div>
+					<img src="/bimbel-gara-logo.webp" alt="GASS Bimbel" className="w-10 h-10 rounded-lg object-cover" width="40" height="40" />
 					<div>
 						<div className="font-extrabold text-lg text-white leading-tight">
-							Bimbel Gara
+							GASS Bimbel
 						</div>
-						<div className="text-[0.6875rem] text-primary-300 font-medium tracking-wide">
+						<div className="text-[0.6875rem] text-silver-400 font-medium tracking-wide">
 							Persiapan Seleksi TNI, Polri &amp; Kedinasan
 						</div>
 					</div>
@@ -60,7 +58,7 @@ export default function Header() {
 						<a
 							key={link.href}
 							href={link.href}
-							className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-150 no-underline text-primary-300 hover:text-white hover:bg-white/8"
+							className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-150 no-underline text-silver-300 hover:text-gold-400 hover:bg-white/8"
 						>
 							{link.label}
 						</a>
@@ -71,7 +69,7 @@ export default function Header() {
 				<div className="flex items-center gap-3">
 					<a
 						href="#pendaftaran"
-						className="relative overflow-hidden hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 min-h-11 font-bold text-sm rounded-full bg-linear-to-br from-accent-500 to-accent-coral text-white shadow-[0_4px_20px_rgba(249,115,22,0.35)] hover:-translate-y-0.5 hover:shadow-[0_6px_28px_rgba(249,115,22,0.45)] active:translate-y-0 transition-all duration-250 no-underline btn-cta"
+						className="hidden sm:inline-flex btn-gold btn-cta items-center justify-center gap-2 px-5 py-2.5 min-h-11 font-bold text-sm rounded-full transition-all duration-250 no-underline"
 					>
 						Daftar Sekarang
 					</a>
@@ -80,7 +78,7 @@ export default function Header() {
 					<button
 						type="button"
 						onClick={() => setMobileOpen(!mobileOpen)}
-						className="md:hidden flex items-center justify-center w-11 h-11 rounded-lg text-primary-300 hover:text-white hover:bg-white/8 transition-colors duration-150"
+						className="md:hidden flex items-center justify-center w-11 h-11 rounded-lg text-silver-300 hover:text-gold-400 hover:bg-white/8 transition-colors duration-150"
 						aria-label={mobileOpen ? "Tutup menu" : "Buka menu"}
 						aria-expanded={mobileOpen}
 					>
@@ -108,7 +106,7 @@ export default function Header() {
 			{/* Mobile Navigation Drawer */}
 			{mobileOpen && (
 				<nav
-					className="md:hidden border-t border-white/8 bg-primary-950/95 backdrop-blur-xl"
+					className="md:hidden border-t border-gold-400/15 bg-navy-950/95 backdrop-blur-xl"
 					aria-label="Navigasi mobile"
 				>
 					<div className="max-w-300 mx-auto px-6 py-4 flex flex-col gap-1">
@@ -117,7 +115,7 @@ export default function Header() {
 								key={link.href}
 								href={link.href}
 								onClick={() => setMobileOpen(false)}
-								className="px-4 py-3 rounded-lg text-sm font-semibold transition-colors duration-150 no-underline text-primary-300 hover:text-white hover:bg-white/8"
+								className="px-4 py-3 rounded-lg text-sm font-semibold transition-colors duration-150 no-underline text-silver-300 hover:text-gold-400 hover:bg-white/8"
 							>
 								{link.label}
 							</a>
@@ -126,13 +124,14 @@ export default function Header() {
 						<a
 							href="#pendaftaran"
 							onClick={() => setMobileOpen(false)}
-							className="sm:hidden mt-2 relative overflow-hidden inline-flex items-center justify-center gap-2 px-5 py-3 min-h-11 font-bold text-sm rounded-full bg-linear-to-br from-accent-500 to-accent-coral text-white shadow-[0_4px_20px_rgba(249,115,22,0.35)] transition-all duration-250 no-underline btn-cta"
+							className="sm:hidden mt-2 btn-gold btn-cta inline-flex items-center justify-center gap-2 px-5 py-3 min-h-11 font-bold text-sm rounded-full transition-all duration-250 no-underline"
 						>
 							Daftar Sekarang
 						</a>
 					</div>
 				</nav>
 			)}
+			<div className="accent-stripe" aria-hidden="true" />
 		</header>
 	);
 }

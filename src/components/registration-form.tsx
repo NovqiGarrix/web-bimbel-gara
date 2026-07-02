@@ -11,9 +11,9 @@ import {
 } from "@/config";
 
 const inputClass =
-	"w-full px-4 py-3 rounded-xl border border-neutral-200 bg-neutral-50 text-neutral-800 text-sm outline-none min-h-11 placeholder:text-neutral-400 focus:border-primary-400 focus:bg-white transition-colors duration-150";
+	"w-full px-4 py-3 rounded-xl border border-silver-300/20 bg-navy-950/60 text-silver-100 text-sm outline-none min-h-11 placeholder:text-silver-500 focus:border-gold-400 focus:bg-navy-900 transition-colors duration-150";
 
-const labelClass = "block text-sm font-semibold text-primary-900 mb-1.5";
+const labelClass = "block text-sm font-semibold text-silver-200 mb-1.5";
 
 function buildWhatsappMessage(fields: {
 	nama: string;
@@ -80,22 +80,22 @@ export default function RegistrationForm() {
 	}
 
 	return (
-		<section id="pendaftaran" className="bg-white relative">
+		<section id="pendaftaran" className="bg-navy-950 relative">
 			{/* Top decorative line */}
 			<div
-				className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary-200 to-transparent"
+				className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-gold-400/30 to-transparent"
 				aria-hidden="true"
 			/>
 
 			<div className="max-w-[1200px] mx-auto py-20 px-6">
 				<div className="text-center mb-12">
-					<span className="inline-flex items-center gap-2 px-4 py-1.5 text-[0.8125rem] font-semibold tracking-wide uppercase text-primary-600 bg-primary-50 border border-primary-200 rounded-full mb-4">
+					<span className="inline-flex items-center gap-2 px-4 py-1.5 text-[0.8125rem] font-semibold tracking-wide uppercase bg-white/8 text-silver-200 border border-gold-400/20 rounded-full mb-4">
 						📝 Form Pendaftaran
 					</span>
-					<h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold text-primary-900 leading-tight mb-4 max-w-[640px] mx-auto">
+					<h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold text-white font-headline leading-tight mb-4 max-w-[640px] mx-auto">
 						Daftar Program Bimbel Gara
 					</h2>
-					<p className="text-[clamp(1rem,2vw,1.125rem)] text-neutral-500 leading-relaxed max-w-[640px] mx-auto">
+					<p className="text-[clamp(1rem,2vw,1.125rem)] text-silver-400 leading-relaxed max-w-[640px] mx-auto">
 						Isi data diri dan pilih program yang kamu inginkan. Setelah submit,
 						kamu akan diarahkan ke WhatsApp admin dengan data yang sudah terisi.
 					</p>
@@ -105,7 +105,7 @@ export default function RegistrationForm() {
 					{/* Form */}
 					<form
 						onSubmit={handleSubmit}
-						className="bg-neutral-50 rounded-2xl p-6 md:p-8 border border-neutral-100 shadow-[0_4px_24px_rgba(0,0,0,0.04)]"
+						className="bg-navy-900/50 rounded-2xl p-6 md:p-8 border border-silver-300/15 shadow-[0_4px_24px_rgba(0,0,0,0.2)]"
 					>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 							<div className="md:col-span-2">
@@ -255,18 +255,18 @@ export default function RegistrationForm() {
 						</div>
 
 						{/* Selected total */}
-						<div className="mt-6 flex items-center justify-between gap-4 px-5 py-4 rounded-xl bg-primary-50 border border-primary-100">
-							<span className="text-sm font-semibold text-primary-900">
+						<div className="mt-6 flex items-center justify-between gap-4 px-5 py-4 rounded-xl bg-gold-400/10 border border-gold-400/20">
+							<span className="text-sm font-semibold text-silver-200">
 								Total Biaya
 							</span>
-							<span className="text-xl font-extrabold text-primary-700">
+							<span className="text-xl font-extrabold text-gold-400">
 								{selectedProgram ? formatRupiah(selectedProgram.price) : "—"}
 							</span>
 						</div>
 
 						<button
 							type="submit"
-							className="btn-cta relative overflow-hidden mt-6 w-full inline-flex items-center justify-center gap-2 px-8 py-4 min-h-11 font-bold text-[1.0625rem] rounded-full bg-linear-to-br from-accent-500 to-accent-coral text-white shadow-[0_4px_20px_rgba(249,115,22,0.35)] hover:-translate-y-0.5 hover:shadow-[0_6px_28px_rgba(249,115,22,0.45)] active:translate-y-0 transition-all duration-250 no-underline"
+							className="btn-gold btn-cta mt-6 w-full inline-flex items-center justify-center gap-2 px-8 py-4 min-h-11 font-bold text-[1.0625rem] rounded-full transition-all duration-250 no-underline"
 						>
 							<svg
 								width="20"
@@ -279,27 +279,27 @@ export default function RegistrationForm() {
 							</svg>
 							Kirim &amp; Lanjut ke WhatsApp
 						</button>
-						<p className="mt-3 text-xs text-neutral-400 text-center">
+						<p className="mt-3 text-xs text-silver-500 text-center">
 							Data kamu akan dikirim ke admin melalui WhatsApp untuk diproses.
 						</p>
 					</form>
 
 					{/* Payment sidebar */}
-					<aside className="lg:sticky lg:top-24 bg-linear-to-br from-primary-950 to-primary-800 rounded-2xl p-6 md:p-8 text-white">
+					<aside className="lg:sticky lg:top-24 bg-linear-to-br from-navy-900 to-navy-800 rounded-2xl p-6 md:p-8 text-white">
 						<h3 className="text-lg font-bold mb-1">Setelah Mengisi Formulir</h3>
-						<p className="text-sm text-primary-300 leading-relaxed mb-6">
+						<p className="text-sm text-silver-300 leading-relaxed mb-6">
 							Lakukan pembayaran ke rekening resmi berikut, lalu hubungi admin
 							untuk kirim bukti dan minta passcode.
 						</p>
 
-						<div className="rounded-xl bg-white/6 border border-white/10 p-5 mb-4">
-							<div className="text-xs uppercase tracking-wider text-primary-300 font-semibold mb-1">
+						<div className="rounded-xl bg-white/6 border border-gold-400/15 p-5 mb-4">
+							<div className="text-xs uppercase tracking-wider text-silver-400 font-semibold mb-1">
 								Bank {BANK.name}
 							</div>
 							<div className="text-2xl font-extrabold tracking-wide text-white mb-1">
 								{BANK.accountNumber}
 							</div>
-							<div className="text-sm text-primary-200">
+							<div className="text-sm text-silver-300">
 								a.n. {BANK.accountHolder}
 							</div>
 						</div>
@@ -308,7 +308,7 @@ export default function RegistrationForm() {
 							href={`https://wa.me/${CONTACT.whatsapp}`}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-11 font-bold text-sm rounded-full bg-secondary-500 text-white hover:bg-secondary-600 transition-colors duration-150 no-underline"
+							className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-11 font-bold text-sm rounded-full bg-[#25D366] text-white hover:bg-[#128C7E] transition-colors duration-150 no-underline"
 						>
 							<svg
 								width="18"

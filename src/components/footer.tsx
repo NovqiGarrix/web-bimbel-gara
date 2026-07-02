@@ -2,30 +2,29 @@ import { SECTION_NAV, SOCIAL } from "@/config";
 
 export default function Footer() {
 	return (
-		<footer className="bg-primary-950 text-primary-300">
+		<footer className="bg-navy-950 text-silver-300">
 			<div className="max-w-[1200px] mx-auto pt-14 pb-6 px-6">
 				{/* Top grid */}
 				<div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-10 mb-12">
 					{/* Brand */}
 					<div>
 						<div className="flex items-center gap-2.5 mb-5">
-							<div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white font-extrabold text-lg">
-								G
-							</div>
+							<img src="/bimbel-gara-logo.webp" alt="GASS Bimbel" className="w-10 h-10 rounded-lg object-cover" width="40" height="40" />
 							<div>
 								<div className="font-extrabold text-lg text-white">
-									Bimbel Gara
+									GASS Bimbel
 								</div>
-								<div className="text-[0.6875rem] text-primary-400">
+								<div className="text-[0.6875rem] text-silver-400">
 									Persiapan Seleksi TNI, Polri &amp; Kedinasan
 								</div>
 							</div>
 						</div>
-						<p className="text-sm leading-relaxed text-primary-400 max-w-[320px]">
+						<p className="text-sm leading-relaxed text-silver-400 max-w-[320px]">
 							Bimbingan persiapan seleksi UNHAN, Akademik TNI-Polri,
 							Bintara-Tamtama, dan Sekolah Kedinasan dengan program satuan
 							maupun paket lengkap.
 						</p>
+						<p className="text-sm font-semibold text-gold-400 mt-3 italic font-headline">Grow • Aspire • Strive • Succeed</p>
 					</div>
 
 					{/* Section navigation */}
@@ -38,7 +37,7 @@ export default function Footer() {
 								<li key={link.href}>
 									<a
 										href={link.href}
-										className="text-primary-400 no-underline text-sm hover:text-white transition-colors duration-150"
+										className="text-silver-400 no-underline text-sm hover:text-gold-400 transition-colors duration-150"
 									>
 										{link.label}
 									</a>
@@ -57,8 +56,8 @@ export default function Footer() {
 								href={SOCIAL.tiktok}
 								target="_blank"
 								rel="noopener noreferrer"
-								aria-label="TikTok Bimbel Gara"
-								className="w-11 h-11 rounded-lg bg-white/6 border border-white/10 flex items-center justify-center text-primary-300 hover:text-white hover:bg-white/12 transition-colors duration-150"
+								aria-label="TikTok GASS Bimbel"
+								className="w-11 h-11 rounded-lg bg-white/6 border border-silver-300/15 flex items-center justify-center text-silver-300 hover:text-gold-400 hover:bg-white/12 transition-colors duration-150"
 							>
 								<svg
 									width="20"
@@ -75,8 +74,8 @@ export default function Footer() {
 								href={SOCIAL.instagram}
 								target="_blank"
 								rel="noopener noreferrer"
-								aria-label="Instagram Bimbel Gara"
-								className="w-11 h-11 rounded-lg bg-white/6 border border-white/10 flex items-center justify-center text-primary-300 hover:text-white hover:bg-white/12 transition-colors duration-150"
+								aria-label="Instagram GASS Bimbel"
+								className="w-11 h-11 rounded-lg bg-white/6 border border-silver-300/15 flex items-center justify-center text-silver-300 hover:text-gold-400 hover:bg-white/12 transition-colors duration-150"
 							>
 								<svg
 									width="20"
@@ -101,14 +100,14 @@ export default function Footer() {
 
 				{/* Divider */}
 				<div
-					className="h-px bg-linear-to-r from-transparent via-white/10 to-transparent mb-6"
+					className="h-px bg-linear-to-r from-transparent via-gold-400/30 to-transparent mb-6"
 					aria-hidden="true"
 				/>
 
 				{/* Bottom */}
-				<div className="text-[0.8125rem] text-primary-500">
+				<div className="text-[0.8125rem] text-silver-500">
 					<p>
-						© {new Date().getFullYear()} Bimbel Gara. Seluruh hak cipta
+						© {new Date().getFullYear()} GASS Bimbel. Seluruh hak cipta
 						dilindungi.
 					</p>
 				</div>

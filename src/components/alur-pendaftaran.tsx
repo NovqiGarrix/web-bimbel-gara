@@ -73,7 +73,7 @@ export default function AlurPendaftaran() {
 	return (
 		<section
 			id="alur"
-			className="bg-linear-to-br from-primary-950 to-primary-800 relative overflow-hidden"
+			className="bg-linear-to-br from-navy-950 to-navy-800 relative overflow-hidden"
 		>
 			{/* Background pattern */}
 			<div
@@ -83,13 +83,13 @@ export default function AlurPendaftaran() {
 
 			<div className="max-w-[1200px] mx-auto py-20 px-6 relative z-10">
 				<div className="text-center mb-14">
-					<span className="inline-flex items-center gap-2 px-4 py-1.5 text-[0.8125rem] font-semibold tracking-wide uppercase bg-white/8 text-primary-200 border border-white/12 rounded-full mb-4">
+					<span className="inline-flex items-center gap-2 px-4 py-1.5 text-[0.8125rem] font-semibold tracking-wide uppercase bg-white/8 text-silver-200 border border-gold-400/20 rounded-full mb-4">
 						⚡ Alur Pendaftaran
 					</span>
-					<h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold text-white leading-tight mb-3 max-w-[600px] mx-auto">
+					<h2 className="font-headline text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold text-white leading-tight mb-3 max-w-[600px] mx-auto">
 						Tiga Langkah Mudah untuk Mulai
 					</h2>
-					<p className="text-[clamp(1rem,2vw,1.125rem)] text-primary-300 leading-relaxed max-w-[560px] mx-auto">
+					<p className="text-[clamp(1rem,2vw,1.125rem)] text-silver-300 leading-relaxed max-w-[560px] mx-auto">
 						Proses pendaftaran yang simpel dan cepat, dari mengisi formulir
 						hingga mendapatkan passcode bimbel.
 					</p>
@@ -100,21 +100,21 @@ export default function AlurPendaftaran() {
 					{steps.map((step) => (
 						<div
 							key={step.number}
-							className="bg-white/5 backdrop-blur-xl border border-white/8 rounded-2xl p-8 relative overflow-hidden transition-all duration-250 hover:translate-y-[-4px] hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)]"
+							className="card-chrome rounded-2xl p-8 relative overflow-hidden transition-all duration-250 hover:translate-y-[-4px]"
 						>
 							{/* Step number background */}
 							<div
-								className="absolute -top-2.5 -right-1.5 text-[5rem] font-extrabold text-white/3 leading-none pointer-events-none"
+								className="absolute -top-2.5 -right-1.5 text-[5rem] font-extrabold text-gold-400/5 leading-none pointer-events-none"
 								aria-hidden="true"
 							>
 								{step.number}
 							</div>
 
-							<div className="w-12 h-12 rounded-lg bg-linear-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white mb-5">
+							<div className="w-12 h-12 rounded-lg bg-linear-to-br from-gold-400 to-gold-600 flex items-center justify-center text-white mb-5">
 								{step.icon}
 							</div>
 
-							<div className="text-xs font-bold text-accent-coral uppercase tracking-widest mb-2">
+							<div className="text-xs font-bold text-gold-400 uppercase tracking-widest mb-2">
 								Langkah {step.number}
 							</div>
 
@@ -122,7 +122,7 @@ export default function AlurPendaftaran() {
 								{step.title}
 							</h3>
 
-							<p className="text-[0.9375rem] text-primary-300 leading-relaxed">
+							<p className="text-[0.9375rem] text-silver-300 leading-relaxed">
 								{step.description}
 							</p>
 						</div>
