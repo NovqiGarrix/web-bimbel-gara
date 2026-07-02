@@ -2,21 +2,21 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-dvh flex items-center overflow-hidden pt-[var(--header-height)] bg-linear-to-br from-navy-950 via-navy-800 via-70% to-navy-700"
+      className="relative min-h-dvh flex items-center overflow-hidden pt-(--header-height) bg-linear-to-br from-navy-950 via-navy-800 via-70% to-navy-700"
     >
       {/* Decorative floating shapes */}
       <div
         className="absolute inset-0 overflow-hidden pointer-events-none"
         aria-hidden="true"
       >
-        <div className="animate-float absolute top-[10%] right-[10%] w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(225,175,62,0.12),transparent_70%)]" />
-        <div className="animate-float-delayed absolute bottom-[15%] left-[5%] w-[200px] h-[200px] rounded-full bg-[radial-gradient(circle,rgba(193,27,27,0.08),transparent_70%)]" />
-        <div className="animate-pulse-soft absolute top-1/2 left-[60%] w-[400px] h-[400px] -translate-x-1/2 -translate-y-1/2 rounded-[40%_60%_55%_45%/60%_40%_60%_40%] bg-[radial-gradient(circle,rgba(30,102,203,0.08),transparent_60%)]" />
+        <div className="animate-float absolute top-[10%] right-[10%] w-75 h-75 rounded-full bg-[radial-gradient(circle,rgba(225,175,62,0.12),transparent_70%)]" />
+        <div className="animate-float-delayed absolute bottom-[15%] left-[5%] w-50 h-50 rounded-full bg-[radial-gradient(circle,rgba(193,27,27,0.08),transparent_70%)]" />
+        <div className="animate-pulse-soft absolute top-1/2 left-[60%] w-100 h-100 -translate-x-1/2 -translate-y-1/2 rounded-[40%_60%_55%_45%/60%_40%_60%_40%] bg-[radial-gradient(circle,rgba(30,102,203,0.08),transparent_60%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[40px_40px]" />
       </div>
 
       {/* Two-column layout */}
-      <div className="relative z-10 max-w-[1200px] mx-auto w-full py-16 px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative z-10 max-w-300 mx-auto w-full py-16 px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left: Information */}
         <div className="animate-slide-up text-center lg:text-left">
           {/* Badge */}
@@ -34,8 +34,8 @@ export default function Hero() {
           </h1>
 
           {/* Sub-headline */}
-          <p className="text-[clamp(1.0625rem,2.2vw,1.25rem)] text-silver-200 leading-relaxed max-w-[640px] lg:max-w-none mb-10 mx-auto lg:mx-0">
-            Persiapan matang untuk UNHAN, Akademik TNI-Polri, Bintara-Tamtama,
+          <p className="text-[clamp(1.0625rem,2.2vw,1.25rem)] text-silver-200 leading-relaxed max-w-160 lg:max-w-none mb-10 mx-auto lg:mx-0">
+            Persiapan matang untuk UNHAN, Akademi TNI-Polri, Bintara-Tamtama,
             hingga Sekolah Kedinasan. Pilih program satuan atau paket lengkap
             sesuai kebutuhanmu.
           </p>
@@ -110,7 +110,7 @@ export default function Hero() {
           className="animate-slide-up flex justify-center lg:justify-end"
           style={{ animationDelay: "0.2s" }}
         >
-          <div className="relative w-full max-w-[380px] aspect-[9/16] rounded-2xl overflow-hidden border border-gold-400/20 shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
+          <div className="relative w-full max-w-95 aspect-9/16 rounded-2xl overflow-hidden border border-gold-400/20 shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
             {/* Gold corner accents */}
             <div
               className="absolute top-0 left-0 w-16 h-16 pointer-events-none z-10"

@@ -29,7 +29,7 @@ export const SECTION_NAV = [
 
 export const SELEKSI_OPTIONS = [
   "UNHAN",
-  "Akademik (TNI-Polri)",
+  "Akademi (TNI-Polri)",
   "Bintara-Tamtama TNI-Polri",
   "Sekolah Kedinasan",
 ] as const;
@@ -43,7 +43,7 @@ export type Program = {
 
 // Program satuan (individual tests).
 export const INDIVIDUAL_PROGRAMS: Program[] = [
-  { id: "tpa", label: "TPA", detail: "Tes Potensi Akademik", price: 3_000_000 },
+  { id: "tpa", label: "TPA", detail: "Tes Potensi Akademi", price: 3_000_000 },
   { id: "skd", label: "SKD", detail: "TWK, TIU, WKP", price: 4_000_000 },
   { id: "psikotes", label: "Psikotes", price: 4_000_000 },
   { id: "jasmani", label: "Jasmani", price: 3_500_000 },
