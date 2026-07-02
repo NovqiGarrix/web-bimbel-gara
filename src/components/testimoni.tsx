@@ -26,8 +26,8 @@ export default function Testimoni() {
         <h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold text-white font-headline leading-tight mb-4 max-w-[650px] mx-auto">
           Mereka yang Sudah Bergabung
         </h2>
-        <p className="text-[clamp(1rem,2vw,1.125rem)] text-silver-400 leading-relaxed max-w-[640px] mx-auto mb-12">
-          Cerita dan pengalaman para alumni Bimbel Gara akan segera hadir di
+        <p className="text-[clamp(1rem,2vw,1.125rem)] text-silver-400 leading-relaxed max-w-160 mx-auto mb-12">
+          Cerita dan pengalaman para alumni Bimbel GASS akan segera hadir di
           sini.
         </p>
 

@@ -3,7 +3,7 @@ import { SECTION_NAV, SOCIAL } from "@/config";
 export default function Footer() {
   return (
     <footer className="bg-navy-950 text-silver-300">
-      <div className="max-w-[1200px] mx-auto pt-14 pb-6 px-6">
+      <div className="max-w-300 mx-auto pt-14 pb-6 px-6">
         {/* Top grid */}
         <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-10 mb-12">
           {/* Brand */}
@@ -11,14 +11,14 @@ export default function Footer() {
             <div className="flex items-center gap-2.5 mb-5">
               <img
                 src="/bimbel-gara-logo.webp"
-                alt="GASS Bimbel"
+                alt="Bimbel GASS"
                 className="w-10 h-10 rounded-lg object-cover"
                 width="40"
                 height="40"
               />
               <div>
                 <div className="font-extrabold text-lg text-white">
-                  GASS Bimbel
+                  Bimbel GASS
                 </div>
                 <div className="text-[0.6875rem] text-silver-400">
                   Persiapan Seleksi TNI, Polri &amp; Kedinasan
@@ -64,7 +64,7 @@ export default function Footer() {
                 href={SOCIAL.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="TikTok GASS Bimbel"
+                aria-label="TikTok Bimbel GASS"
                 className="w-11 h-11 rounded-lg bg-white/6 border border-silver-300/15 flex items-center justify-center text-silver-300 hover:text-gold-400 hover:bg-white/12 transition-colors duration-150"
               >
                 <svg
@@ -82,7 +82,7 @@ export default function Footer() {
                 href={SOCIAL.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram GASS Bimbel"
+                aria-label="Instagram Bimbel GASS"
                 className="w-11 h-11 rounded-lg bg-white/6 border border-silver-300/15 flex items-center justify-center text-silver-300 hover:text-gold-400 hover:bg-white/12 transition-colors duration-150"
               >
                 <svg
@@ -115,7 +115,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="text-[0.8125rem] text-silver-500">
           <p>
-            © {new Date().getFullYear()} GASS Bimbel. Seluruh hak cipta
+            © {new Date().getFullYear()} Bimbel GASS. Seluruh hak cipta
             dilindungi.
           </p>
         </div>

@@ -2,7 +2,6 @@
 // Update values here and they propagate across the whole site.
 
 export const CONTACT = {
-  // TODO: WhatsApp number was left blank in the requirements — swap this in.
   // International format, digits only (no "+", spaces, or dashes).
   whatsapp: "6282298188946",
   whatsappDisplay: "+62 822-9818-8946",
@@ -15,8 +14,8 @@ export const BANK = {
 } as const;
 
 export const SOCIAL = {
-  tiktok: "https://www.tiktok.com/@bimbelgara",
-  instagram: "https://www.instagram.com/bimbelgara",
+  tiktok: "https://vt.tiktok.com/ZSCxGbeLC",
+  instagram: "https://www.instagram.com/gara_selection_school",
 } as const;
 
 // Anchor navigation shared by the header and footer.
